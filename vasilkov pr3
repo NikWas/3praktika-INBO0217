@@ -1,0 +1,36 @@
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+using namespace std;
+
+    class Vector
+    {
+        public:
+        struct startp
+        {
+            int x;
+            int y;
+        } a;
+        struct endp
+        {
+            int x;
+            int y;
+        } b;
+        float length;
+    };
+
+int main()
+{
+    Vector Vector1;
+    cout << "X coord of first point: ";
+    cin >> Vector1.a.x;
+    cout << "Y coord of first point: ";
+    cin >> Vector1.a.y;
+    cout << "X coord of second point: ";
+    cin >> Vector1.b.x;
+    cout << "Y coord of second point: ";
+    cin >> Vector1.b.y;
+    Vector1.length = (sqrt(pow((Vector1.b.x-Vector1.a.x),2) + pow((Vector1.b.y-Vector1.a.y),2)));
+    cout << "The length is " << Vector1.length << endl;
+    return 0;
+}
